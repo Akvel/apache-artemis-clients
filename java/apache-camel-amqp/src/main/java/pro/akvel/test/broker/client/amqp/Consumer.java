@@ -13,7 +13,7 @@ import static pro.akvel.test.broker.client.amqp.SSLUtil.initSSLContextFromFile;
  * Пример вычитывания всех сообщения из очереди
  */
 public class Consumer {
-    private static final BrokerConfig brokerConfig = //нужно сделать свою реализацию и заполнить поля, new BrokerConfigImpl();
+    private static BrokerConfig brokerConfig; // = нужно сделать свою реализацию и заполнить поля, new BrokerConfigImpl();
 
     public static void main(String[] args) throws Exception {
         try (CamelContext context = new DefaultCamelContext()) {
