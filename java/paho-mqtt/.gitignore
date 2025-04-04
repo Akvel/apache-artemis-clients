@@ -1,0 +1,6 @@
+/target/
+
+/src/main/java/pro/akvel/test/broker/client/mqtt/MyBrokerConfig.java
+
+**/MyBrokerConfig.java
+/.idea/
