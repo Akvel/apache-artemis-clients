@@ -30,7 +30,7 @@ public class MqttSendMessage {
       client.connect(options);
 
       MqttMessage msg = new MqttMessage("Test %s".formatted(ZonedDateTime.now()).getBytes(StandardCharsets.UTF_8));
-      msg.setQos(2);
+      msg.setQos(0);
       msg.setRetained(true);
       client.publish(config.getQueueName(), msg);
 

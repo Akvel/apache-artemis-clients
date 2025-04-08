@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pro.akve.test.artemis</groupId>
-    <artifactId>qpid-protonj2-client</artifactId>
+    <artifactId>paho-mqtt</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
