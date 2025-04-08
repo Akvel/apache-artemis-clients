@@ -1,4 +1,4 @@
-package pro.akvel.test.broker.client.amqp;
+package pro.akvel.test.broker.client.amqp.authuserpassword;
 
 import org.apache.qpid.protonj2.client.*;
 
@@ -12,14 +12,12 @@ public class QpidSendMessage {
         final Client client = Client.create();
 
         final ConnectionOptions options = new ConnectionOptions();
-        //options.user();
-        //options.password();
+        options.user(brokerConfig.getUserName());
+        options.password(brokerConfig.getUserPassword());
         options.sslEnabled(true);
         options.sslOptions().verifyHost(true);
-        options.sslOptions().keyStoreLocation(brokerConfig.getKeystorePath());
-        options.sslOptions().keyStorePassword(brokerConfig.getKeystorePassword());
         options.sslOptions().trustStoreLocation(brokerConfig.getTruststorePath());
-        options.sslOptions().keyStorePassword(brokerConfig.getTruststorePassword());
+        options.sslOptions().trustStorePassword(brokerConfig.getTruststorePassword());
 
 
         try (Connection connection = client.connect(brokerConfig.getUrl(), serverPort, options)) {

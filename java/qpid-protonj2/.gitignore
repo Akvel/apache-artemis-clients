@@ -30,3 +30,5 @@ hs_err_pid*
 /java/qpid-protonj2/target/
 /.idea/
 /java/qpid-protonj2/.idea/
+/src/main/java/pro/akvel/test/broker/client/amqp/MyBrokerConfig.java
+/src/main/java/pro/akvel/test/broker/client/amqp/authuserpassword/MyBrokerConfig.java

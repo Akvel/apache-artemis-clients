@@ -1,4 +1,4 @@
-package pro.akvel.test.broker.client.amqp;
+package pro.akvel.test.broker.client.amqp.authuserpassword;
 
 public interface BrokerConfig {
     /**
@@ -9,11 +9,11 @@ public interface BrokerConfig {
     /**
      * Путь до ключницы jks содержащей приватный ключ клиента
      */
-    String getKeystorePath();
+    String getUserName();
     /**
      * Пароль от ключницы jks содержащей приватный ключ клиента
      */
-    String getKeystorePassword();
+    String getUserPassword();
 
     /**
      * Очередь брокера
